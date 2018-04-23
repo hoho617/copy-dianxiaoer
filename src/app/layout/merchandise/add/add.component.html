@@ -1,0 +1,122 @@
+<div class="wrapper_box">
+    <div class="title">
+        商品管理 >
+        <span>新增商品</span>
+    </div>
+    <div class="wrapper_input" nz-row>
+        <div class="wrapper_title">
+            商品信息
+        </div>
+        <div class="seperate_line mtop_line"></div>
+        <div class="input_item" nz-col [nzSpan]="6">
+            <label class="pull-left input_label">全部商品</label>
+            <nz-input [(ngModel)]="allGoods" [nzSize]="'large'"></nz-input>
+        </div>
+        <div class="input_item" nz-col [nzSpan]="18">
+            <label class="pull-left input_label">全部类别</label>
+            <nz-input [(ngModel)]="allTypes" [nzSize]="'large'"></nz-input>
+        </div>
+        <div class="input_item" nz-col [nzSpan]="6">
+            <label class="pull-left input_label">商品价格</label>
+            <nz-input [(ngModel)]="allGoods" [nzSize]="'large'"></nz-input>
+        </div>
+        <div class="input_item" nz-col [nzSpan]="6">
+            <label class="pull-left input_label">优惠价</label>
+            <nz-input [(ngModel)]="discountPrice" [nzSize]="'large'"></nz-input>
+        </div>
+        <div class="input_item" nz-col [nzSpan]="12">
+            <label class="pull-left input_label">积分兑换</label>
+            <nz-input [(ngModel)]="integralChanges" [nzSize]="'large'"></nz-input>
+        </div>
+        <div class="input_item upload_item" nz-col [nzSpan]="24">
+            <label class="pull-left input_label">商品主图</label>
+            <div class="upload_box">
+                <nz-upload nzAction="https://jsonplaceholder.typicode.com/posts/" nzListType="picture-card" [(nzFileList)]="fileList" [nzShowButton]="fileList.length < 3" [nzPreview]="handlePreview">
+                    <i class="anticon anticon-plus"></i>
+                </nz-upload>
+                <nz-modal [nzVisible]="previewVisible" [nzContent]="modalContent" [nzFooter]="null" (nzOnCancel)="previewVisible=false">
+                    <ng-template #modalContent>
+                        <img [src]="previewImage" [ngStyle]="{ 'width': '100%' }" />
+                    </ng-template>
+                </nz-modal>
+            </div>
+            <span class="bottom_tip upload_tip">(建议尺寸为640像素*640像素，大小不超过500kb)</span>
+        </div>
+        <div class="input_item upload_item" nz-col [nzSpan]="24">
+            <label class="pull-left input_label">商品副图</label>
+            <div class="upload_box">
+                <nz-upload nzAction="https://jsonplaceholder.typicode.com/posts/" nzListType="picture-card" [(nzFileList)]="fileList" [nzShowButton]="fileList.length < 3" [nzPreview]="handlePreview">
+                    <i class="anticon anticon-plus"></i>
+                </nz-upload>
+                <nz-modal [nzVisible]="previewVisible" [nzContent]="modalContent" [nzFooter]="null" (nzOnCancel)="previewVisible=false">
+                    <ng-template #modalContent>
+                        <img [src]="previewImage" [ngStyle]="{ 'width': '100%' }" />
+                    </ng-template>
+                </nz-modal>
+            </div>
+            <span class="bottom_tip upload_tip"> (选传，单张图片大小不超过500kb，最多5张)</span>
+        </div>
+        <div class="input_item input_desc" nz-col [nzSpan]="24">
+            <label class="pull-left input_label">商品描述</label>
+            <span class="desc_area">
+                <nz-input [(ngModel)]="inputValue" [nzType]="'textarea'" [nzRows]="'5'" [nzPlaceHolder]="''"></nz-input>
+            </span>
+        </div>
+        <div class="input_item" nz-col [nzSpan]="24">
+            <label class="pull-left input_label">状态</label>
+            <span class="radio_area">
+                <nz-radio-group [(ngModel)]="radioValue1">
+                    <label nz-radio [nzValue]="'a'" class="radio_item">
+                        <span>上架</span>
+                    </label>
+                    <label nz-radio [nzValue]="'b'" class="radio_item">
+                        <span>下架</span>
+                    </label>
+                </nz-radio-group>
+            </span>
+        </div>
+        <div class="input_item" nz-col [nzSpan]="24">
+            <label class="pull-left input_label">快递费</label>
+            <span class="radio_area">
+                <nz-radio-group [(ngModel)]="radioValue2">
+                    <label nz-radio [nzValue]="'a1'" class="radio_item">
+                        <span>免邮</span>
+                    </label>
+                    <label nz-radio [nzValue]="'b1'" class="radio_item">
+                        <span>快递费</span>
+                         <nz-input [(ngModel)]="expressPrice"></nz-input>
+                    </label>
+                </nz-radio-group>
+            </span>
+        </div>
+        <div class="input_item" nz-col [nzSpan]="24">
+            <label class="pull-left input_label">商品期限</label>
+            <span class="radio_area">
+                <nz-radio-group [(ngModel)]="radioValue3">
+                    <label nz-radio [nzValue]="'a2'" class="radio_item">
+                        <span>永久</span>
+                    </label>
+                    <label nz-radio [nzValue]="'b2'" class="radio_item">
+                        <span>自定义</span>
+                         <nz-datepicker [(ngModel)]="_date" nzShowTime [nzPlaceHolder]="'Select date'" [nzFormat]="'YYYY-MM-DD HH:mm'"></nz-datepicker>
+                    </label>
+                </nz-radio-group>
+            </span>
+        </div>
+        <div class="input_item" nz-col [nzSpan]="24">
+            <label class="pull-left input_label">开售时间</label>
+            <span class="select_area">
+                <nz-datepicker (ngModelChange)="_startDate=$event;_startValueChange()" [ngModel]="_startDate" [nzDisabledDate]="_disabledStartDate" nzShowTime [nzFormat]="'YYYY-MM-DD'" [nzPlaceHolder]="''"></nz-datepicker>
+                <span class="range_line"></span>
+                <nz-datepicker (ngModelChange)="_endDate=$event;_endValueChange()" [ngModel]="_endDate" [nzDisabledDate]="_disabledEndDate" [nzShowTime]="_endTime" [nzFormat]="'YYYY-MM-DD'" [nzPlaceHolder]="''"></nz-datepicker>
+            </span>
+        </div>
+      <div class="input_item btn_item" nz-col [nzSpan]="24">
+        <span class="red_btn">保存</span>
+        <span class="grey_btn">返回</span>
+      </div>
+    </div>
+</div>
+
+
+

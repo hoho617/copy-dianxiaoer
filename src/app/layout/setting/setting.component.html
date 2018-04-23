@@ -1,0 +1,162 @@
+<div class="wrapper_box">
+  <div class="wrapper_tabs only_tabs">
+    <nz-tabset>
+      <nz-tab *ngFor="let tab of tabs">
+        <ng-template #nzTabHeading>
+          {{tab.name}}
+        </ng-template>
+        <div class="tab_table">
+          <ng-container *ngIf="tab.index ==1">
+            <div class="input_item long_input_item">
+              <label class="pull-left input_label input_required">店铺名称</label>
+              <nz-input [(ngModel)]="shopName" [nzSize]="'large'"></nz-input>
+            </div>
+            <div class="input_item long_input_item">
+              <label class="pull-left input_label input_required">电话</label>
+              <nz-input [(ngModel)]="phoneNumber" [nzSize]="'large'"></nz-input>
+            </div>
+            <div class="input_item long_input_item">
+              <label class="pull-left input_label input_required">开业时间</label>
+              <nz-input [(ngModel)]="openTime" [nzSize]="'large'"></nz-input>
+            </div>
+            <div class="input_item long_input_item">
+              <label class="pull-left input_label">预订电话</label>
+              <nz-input [(ngModel)]="orderPhoneNumber" [nzSize]="'large'"></nz-input>
+            </div>
+            <div class="input_item long_input_item">
+              <label class="pull-left input_label">联系地址</label>
+              <nz-input [(ngModel)]="address" [nzSize]="'large'"></nz-input>
+            </div>
+            <div class="seperate_line"></div>
+            <div class="input_item long_input_item">
+              <label class="pull-left input_label">酒店类型</label>
+              <nz-select [ngModel]="'类型1'" [nzPlaceHolder]="''">
+                <nz-option [nzLabel]="'类型1'" [nzValue]="'类型1'"></nz-option>
+                <nz-option [nzLabel]="'类型2'" [nzValue]="'类型2'"></nz-option>
+              </nz-select>
+            </div>
+            <div class="input_item long_input_item">
+              <label class="pull-left input_label">酒店星级</label>
+              <nz-select [ngModel]="'五星级'" [nzPlaceHolder]="''">
+                <nz-option [nzLabel]="'五星级'" [nzValue]="'五星级'"></nz-option>
+                <nz-option [nzLabel]="'三星级'" [nzValue]="'三星级'"></nz-option>
+              </nz-select>
+            </div>
+            <div class="input_item long_input_item">
+              <label class="pull-left input_label">房间数</label>
+              <nz-input [(ngModel)]="roomNumber" [nzSize]="'large'"></nz-input>
+            </div>
+            <div class="input_item long_input_item">
+              <label class="pull-left input_label">会议室</label>
+              <span class="radio_area">
+                <nz-radio-group [(ngModel)]="radioValue1">
+                    <label nz-radio [nzValue]="'a'" class="radio_item">
+                        <span>有</span>
+                    </label>
+                    <label nz-radio [nzValue]="'b'" class="radio_item">
+                        <span>无</span>
+                    </label>
+                </nz-radio-group>
+              </span>
+            </div>
+            <div class="input_item input_desc long_input_item">
+              <label class="pull-left input_label">酒店简介</label>
+              <span class="desc_area">
+                <nz-input [(ngModel)]="inputValue" [nzType]="'textarea'" [nzRows]="'5'" [nzPlaceHolder]="''"></nz-input>
+            </span>
+            </div>
+            <div class="input_item upload_item long_input_item">
+              <label class="pull-left input_label">酒店标志</label>
+              <div class="upload_box">
+                <nz-upload nzAction="https://jsonplaceholder.typicode.com/posts/" nzListType="picture-card" [(nzFileList)]="fileList" [nzShowButton]="fileList.length < 3" [nzPreview]="handlePreview">
+                  <i class="anticon anticon-plus"></i>
+                </nz-upload>
+                <nz-modal [nzVisible]="previewVisible" [nzContent]="modalContent" [nzFooter]="null" (nzOnCancel)="previewVisible=false">
+                  <ng-template #modalContent>
+                    <img [src]="previewImage" [ngStyle]="{ 'width': '100%' }" />
+                  </ng-template>
+                </nz-modal>
+                <span class="btn_item upload_btn_clear">
+                  <!--<span class="disable_btn">清除</span>-->
+                  <span class="grey_btn">清除</span>
+                </span>
+              </div>
+            </div>
+            <div class="seperate_line"></div>
+            <div class="input_item long_input_item">
+              <label class="pull-left input_label">店长姓名</label>
+              <nz-input [(ngModel)]="bossName" [nzSize]="'large'"></nz-input>
+            </div>
+            <div class="input_item long_input_item">
+              <label class="pull-left input_label">店长手机</label>
+              <nz-input [(ngModel)]="phoneNumber" [nzSize]="'large'"></nz-input>
+            </div>
+            <div class="input_item long_input_item">
+              <label class="pull-left input_label">常用邮箱</label>
+              <nz-input [(ngModel)]="email" [nzSize]="'large'"></nz-input>
+            </div>
+            <div class="input_item btn_item">
+              <span class="red_btn">保存</span>
+            </div>
+          </ng-container>
+          <ng-container *ngIf="tab.index ==2">
+            <div class="input_item long_input_item">
+              <label class="pull-left input_label">店铺模板</label>
+              <nz-input [(ngModel)]="shopName" [nzSize]="'large'"></nz-input>
+            </div>
+            <div class="input_item input_desc long_input_item">
+              <label class="pull-left input_label">店铺公告</label>
+              <span class="desc_area">
+                <nz-input [(ngModel)]="inputValue" [nzType]="'textarea'" [nzRows]="'5'" [nzPlaceHolder]="''"></nz-input>
+              </span>
+            </div>
+            <div class="input_item upload_item long_input_item">
+              <label class="pull-left input_label">首页图片</label>
+              <div class="upload_box">
+                <nz-upload nzAction="https://jsonplaceholder.typicode.com/posts/" nzListType="picture-card" [(nzFileList)]="fileList" [nzShowButton]="fileList.length < 3" [nzPreview]="handlePreview">
+                  <i class="anticon anticon-plus"></i>
+                </nz-upload>
+                <nz-modal [nzVisible]="previewVisible" [nzContent]="modalContent" [nzFooter]="null" (nzOnCancel)="previewVisible=false">
+                  <ng-template #modalContent>
+                    <img [src]="previewImage" [ngStyle]="{ 'width': '100%' }" />
+                  </ng-template>
+                </nz-modal>
+              </div>
+              <span class="bottom_tip upload_tip">(最多添加5张轮播图，建议尺寸为640像素*640像素，大小不超过500kb)</span>
+            </div>
+            <div class="input_item long_input_item">
+              <label class="pull-left input_label">广告展示</label>
+              <span class="radio_area">
+                <nz-radio-group [(ngModel)]="radioValue1">
+                    <label nz-radio [nzValue]="'a'" class="radio_item">
+                        <span>开启</span>
+                    </label>
+                    <label nz-radio [nzValue]="'b'" class="radio_item">
+                        <span>关闭</span>
+                    </label>
+                </nz-radio-group>
+              </span>
+            </div>
+            <div class="input_item long_input_item">
+              <label class="pull-left input_label">展示位置</label>
+              <span class="only_text">首页广告产品推荐区</span>
+            </div>
+            <div class="input_item long_input_item">
+              <label class="pull-left input_label">展示内容</label>
+              <span class="checkbox_area">
+                <nz-checkbox-group [(ngModel)]="checkOptions"></nz-checkbox-group>
+              </span>
+            </div>
+            <div class="input_item btn_item">
+              <span class="red_btn">保存</span>
+              <span class="grey_btn">返回</span>
+            </div>
+          </ng-container>
+        </div>
+      </nz-tab>
+    </nz-tabset>
+  </div>
+</div>
+
+
+

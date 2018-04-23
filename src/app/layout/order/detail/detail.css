@@ -1,0 +1,177 @@
+.title{
+  height:50px;
+  line-height:50px;
+  padding-left: 16px;
+  font-size: 14px;
+  color: #000;
+}
+.title span{
+  font-weight:bold;
+}
+.wrap-content{
+  background: #fff;
+  padding: 0 16px;
+  color: #000;
+  margin-left: 16px;
+}
+.progress{
+  padding: 50px 0;
+}
+.title-progress{
+  height: 40px;
+  border-bottom: 2px solid #90A4AD;
+  line-height:40px;
+}
+.accept {
+  font-size: 14px;
+  height: 24px;
+  line-height: 24px;
+  color: #FFF;
+  background: #cacaca;
+  z-index: 1;
+  text-align: center;
+  width:24%;
+  display: inline-block;
+  position: relative;
+}
+.accept:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -12px;
+  z-index: 8;
+  top: 0px;
+  border-top: 12px solid #cacaca;
+  border-left: 12px solid transparent !important;
+  border-bottom: 12px solid #cacaca;
+}
+.accept:after {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 24px;
+  position: absolute;
+  right: 0px;
+  z-index: 9;
+  top: 0px;
+  border-top: 12px solid transparent !important;
+  border-left: 12px solid #cacaca;
+  border-bottom: 12px solid transparent !important;
+  background-color: #fff;
+}
+.order-time p{
+  width: 24%;
+  display: inline-block;
+  text-align: center;
+  font-size:12px;
+  margin-top:10px;
+}
+.done{
+  background: #F05A1E;
+  color: #fff !important;
+}
+.done:before,.done:after{
+  border-color: #f05a1e;
+}
+.wrap-info{
+  margin:10px 0 10px 16px;
+  background: #fff;
+  color: #000;
+  height: 560px;
+}
+.info-left{
+  width:51%;
+  padding-right:10px;
+  background: #efefef;
+
+}
+.order-info{
+  padding: 0 16px;
+  background: #fff;
+}
+.order-title{
+  height: 40px;
+  line-height:40px;
+  font-weight: bold;
+  border-bottom: 1px solid #90A4AD;
+  margin-bottom: 10px;
+}
+.deal{
+  color: #666;
+  font-weight: normal;
+}
+.order-content{
+  height:30px;
+  line-height: 30px;
+}
+.content-title{
+  width:25%;
+  display: inline-block;
+}
+.top{
+  margin-top:10px;
+}
+.evaluate{
+  width:49%;
+  height:560px;
+}
+.distri-detail{
+  height:90px;
+  line-height:30px;
+}
+.feel label{
+  width:20%;
+  display: inline-block;
+}
+.feel label img{
+  vertical-align: middle;
+  width: 28px;
+}
+.none{
+  display: none;
+}
+.anticon{
+  font-size: 20px !important;
+}
+.smile{
+  height: 90px;
+  line-height: 60px;
+}
+.grade-title{
+  width: 20%;
+  display: inline-block;
+}
+.grade-right{
+  width: 75%;
+}
+.grade-content{
+  height: 300px;
+}
+.feel nz-input{
+  width: 74%;
+  vertical-align: text-top;
+}
+.other{
+  height: 120px;
+  vertical-align: text-top;
+}
+.grade-detail{
+  height: 50px;
+  line-height: 40px;
+}
+.invoice{
+  height: 330px;
+}
+.thing{
+  width: 25%;
+  display: inline-block;
+  color: #666;
+  font-weight: normal;
+}
+.no-bottom{
+  margin-bottom: 0;
+}
+.noheight{
+  height: auto;
+  padding-bottom: 10px;
+}

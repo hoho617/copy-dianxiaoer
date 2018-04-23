@@ -1,0 +1,67 @@
+.wrapper_input {
+  padding:16px;
+  background: #fff;
+  font-size:14px;
+  color:#172926;
+}
+.input_item {
+  height:30px;
+  line-height: 30px;
+  margin-bottom:15px;
+}
+.input_item:last-child{
+  margin-bottom:0;
+}
+.wrapper_input .input_label {
+  height:30px;
+  line-height: 30px;
+  width:70px;
+  text-align: left;
+  color:#172926;
+}
+.wrapper_input nz-input,.wrapper_input nz-select,.wrapper_input nz-datepicker {
+  width:140px;
+  font-size:14px;
+}
+
+
+
+.info_section {
+  margin-bottom:50px;
+}
+.last_info_section{
+  margin-bottom:20px;
+}
+.long_label .input_label{
+  width:110px;
+}
+.mix_input nz-input {
+  width:6%;
+}
+.mix_input nz-select {
+  width:12%;
+}
+.mix_checkbox {
+  margin-bottom:16px;
+}
+.vertical_checkbox {
+  display: inline-block;
+}
+:host ::ng-deep .vertical_checkbox .ant-checkbox-wrapper{
+  display: block;
+  height:30px;
+  line-height:30px;
+  color:#172926;
+  margin:0;
+  margin-top:5px;
+}
+.check_on_box {
+  color:#172926;
+}
+:host ::ng-deep .check_off_box .ant-checkbox-checked .ant-checkbox-inner {
+  background-color:#90a4ad;
+  border-color: #90a4ad;
+}
+:host ::ng-deep .check_off_box .ant-checkbox-wrapper {
+  color:#9fa0a0;
+}

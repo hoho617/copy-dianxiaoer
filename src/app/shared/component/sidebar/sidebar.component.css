@@ -1,0 +1,71 @@
+.sider{
+  position: fixed;
+  margin-right: -100%;
+  top: 110px;
+  bottom: 0;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+.onelevel{
+    width: 120px;
+    background: #3C3C3C;
+    height: 100%;
+    margin-top: 109px;
+}
+.secondlevel{
+    width: 100px;
+    height: 100%;
+    border-right: 1px solid #ddd;
+    margin-top: 109px;
+}
+.onelevel li{
+    height: 60px;
+    line-height: 60px;
+    list-style: none;
+    border-bottom: 1px solid #747474;
+}
+.secondlevel li{
+    height: 60px;
+    line-height: 60px;
+    list-style: none;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+.secondlevel li a{
+    color: #595757;
+    padding: 5px;
+}
+.secondActive{
+    background: #a3d7ff;
+}
+.secondlevel li .secondActive{
+    color: #008CFA;
+}
+.clear{
+    clear: both;
+}
+.menuActive{
+    background: #fff;
+    border-right: 1px solid #f2f2f2;
+}
+.menuActive a{
+    color: #3C3C3C;
+}
+.ant-menu.ant-menu-dark .ant-menu-item-selected {
+  background-color: #2B4245;
+}
+
+
+.sider .sider_item {
+  height:60px;
+  line-height: 60px;
+  text-align: center;
+  padding:0;
+}

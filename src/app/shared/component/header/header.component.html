@@ -1,0 +1,23 @@
+<div class="wrap-head">
+  <div class="head">
+      <div class="pull-left logo">
+          <span class="title">客赞</span>
+          <span> | 客户体验收益管理系统</span>
+      </div>
+      <div class="pull-right manageSet">
+
+      </div>
+      <div class="clear"></div>
+  </div>
+  <div class="headNav">
+      <ul>
+          <li (click)="changeRoutes('/order')" routerLink="/order" routerLinkActive="navActive">订单</li>
+          <li (click)="changeRoutes('/merchandise')" routerLink="/merchandise" routerLinkActive="navActive">商品</li>
+          <li (click)="changeRoutes('/client')" routerLink="/client" routerLinkActive="navActive">客户</li>
+          <li (click)="changeRoutes('/comment')" routerLink="/comment" routerLinkActive="navActive">点评</li>
+          <li (click)="changeRoutes('/setting')" routerLink="/setting" routerLinkActive="navActive">设置</li>
+          <div class="clear"></div>
+      </ul>
+  </div>
+  <!--<div class="headGap"></div>-->
+</div>

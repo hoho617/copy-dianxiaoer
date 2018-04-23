@@ -1,0 +1,27 @@
+.clear{
+  clear: both;
+}
+.foot{
+  /*position: fixed;*/
+  /*bottom: 0;*/
+  /*right:0;*/
+  /*left:140px;*/
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  background: #EFEFEF;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  color: #9FA0A0;
+}
+.wrap {
+  background: #EFEFEF;
+  left: 140px;
+  top:110px;
+  position: fixed;
+  bottom: 0px;
+  right:0;
+  overflow-y: auto;
+}

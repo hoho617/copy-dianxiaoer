@@ -1,0 +1,114 @@
+<div class="wrapper_box">
+  <div class="wrapper_input">
+    <div class="info_section">
+      <div class="wrapper_title">
+        订单推送设置
+      </div>
+      <div class="seperate_line mtop_line"></div>
+      <div class="input_item long_input_item long_label">
+        <label class="pull-left input_label">推送人员</label>
+        <span class="radio_area">
+          <nz-radio-group [(ngModel)]="radioValue1">
+              <label nz-radio [nzValue]="'a'" class="radio_item">
+                  <span>全部人员实时推送</span>
+              </label>
+              <label nz-radio [nzValue]="'b'" class="radio_item">
+                  <span>按管家组职能推送</span>
+              </label>
+          </nz-radio-group>
+        </span>
+      </div>
+      <div class="input_item long_input_item long_label">
+        <label class="pull-left input_label">维修订单推送至</label>
+        <nz-select [ngModel]="'工程组'" [nzPlaceHolder]="''">
+          <nz-option [nzLabel]="'工程组'" [nzValue]="'工程组'"></nz-option>
+          <nz-option [nzLabel]="'管家组'" [nzValue]="'管家组'"></nz-option>
+        </nz-select>
+      </div>
+      <div class="input_item long_input_item long_label">
+        <label class="pull-left input_label">服务订单推送至</label>
+        <nz-select [ngModel]="'工程组'" [nzPlaceHolder]="''">
+          <nz-option [nzLabel]="'工程组'" [nzValue]="'工程组'"></nz-option>
+          <nz-option [nzLabel]="'管家组'" [nzValue]="'管家组'"></nz-option>
+        </nz-select>
+      </div>
+    </div>
+    <div class="info_section">
+      <div class="wrapper_title">
+        订单超时推送规则
+      </div>
+      <div class="seperate_line mtop_line"></div>
+      <div class="input_item">订单实时推送至管家组</div>
+      <div class="mix_input input_item">
+        <span>超过 </span>
+        <nz-input [(ngModel)]="value1" [nzSize]="'large'"></nz-input>
+        <span>  分钟,推送给  </span>
+        <nz-select [ngModel]="'主管'" [nzPlaceHolder]="''">
+          <nz-option [nzLabel]="'主管'" [nzValue]="'主管'"></nz-option>
+          <nz-option [nzLabel]="'经理'" [nzValue]="'经理'"></nz-option>
+        </nz-select>
+      </div>
+      <div class="mix_input input_item">
+        <span>超过</span>
+        <nz-input [(ngModel)]="value1" [nzSize]="'large'"></nz-input>
+        <span>分钟,推送给 </span>
+        <nz-select [ngModel]="'主管'" [nzPlaceHolder]="''">
+          <nz-option [nzLabel]="'主管'" [nzValue]="'主管'"></nz-option>
+          <nz-option [nzLabel]="'经理'" [nzValue]="'经理'"></nz-option>
+        </nz-select>
+      </div>
+    </div>
+    <div class="info_section last_info_section">
+      <div class="wrapper_title">
+        短信发送规则
+      </div>
+      <div class="seperate_line mtop_line"></div>
+      <div class="long_label mix_checkbox">
+        <label class="pull-left input_label">短信通知</label>
+        <div class="vertical_checkbox">
+          <span class="radio_area">
+            <nz-radio-group [(ngModel)]="radioValue">
+                <label nz-radio [nzValue]="radioValue1" class="radio_item">
+                    <span>开启</span>
+                </label>
+                <label nz-radio [nzValue]="radioValue2" class="radio_item">
+                    <span>关闭</span>
+                </label>
+            </nz-radio-group>
+          </span>
+          <div *ngIf="radioValue === radioValue1" class="check_on_box">
+            <!--<nz-checkbox-group [(ngModel)]="checkOptions"></nz-checkbox-group>-->
+            <label nz-checkbox *ngFor="let checkoption of checkOptions" [(ngModel)]="checkoption.checked" >
+              <span>{{checkoption.value}}</span><span class="checkbox_tip">{{checkoption.label}}</span>
+            </label>
+          </div>
+          <div *ngIf="radioValue === radioValue2" class="check_off_box">
+            <label nz-checkbox *ngFor="let checkoption of checkOptions" [(ngModel)]="checkoption.checked" >
+              <span>{{checkoption.value}}</span><span class="checkbox_tip">{{checkoption.label}}</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="input_item long_input_item long_label">
+        <label class="pull-left input_label">下班后提醒</label>
+        <span class="radio_area">
+          <nz-radio-group [(ngModel)]="radioValue1">
+              <label nz-radio [nzValue]="'a'" class="radio_item">
+                  <span>提醒</span>
+              </label>
+              <label nz-radio [nzValue]="'b'" class="radio_item">
+                  <span>不提醒</span>
+              </label>
+          </nz-radio-group>
+        </span>
+      </div>
+    </div>
+    <div class="input_item btn_item">
+      <span class="red_btn">保存</span>
+      <span class="grey_btn">返回</span>
+    </div>
+  </div>
+</div>
+
+
+

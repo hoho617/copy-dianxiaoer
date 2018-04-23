@@ -1,0 +1,17 @@
+<div class="wrap-inform">
+  <div class="inform inform-active" (click)="showModal()">
+    <i class="anticon anticon-bell"></i> 订单通知
+    <nz-badge [nzCount]="noticeNumber" ></nz-badge>
+  </div>
+  <div class="inform qqform">
+    <i class="anticon anticon-customer-service"></i> 在线客服
+  </div>
+  <div class="inform telform">
+    <i class="anticon anticon-phone"></i> <i>0731-88892222</i>
+  </div>
+  <div class="ad_position">
+    <img src="http://placehold.it/170x424" alt="">
+  </div>
+</div>
+
+<app-order-notice [(isVisible)]="isVisible" [noticeNumber]="noticeNumber"></app-order-notice>

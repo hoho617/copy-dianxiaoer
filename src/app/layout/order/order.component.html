@@ -1,0 +1,105 @@
+<div class="wrapper_box">
+  <div class="wrapper_input" nz-row>
+    <div class="input_item" nz-col [nzSpan]="6">
+      <label class="pull-left input_label">订单号</label>
+      <nz-input [(ngModel)]="orderNumber" [nzSize]="'large'"></nz-input>
+    </div>
+    <div class="input_item" nz-col [nzSpan]="6">
+      <label class="pull-left input_label">订单类型</label>
+      <nz-select [ngModel]="'类型1'" [nzPlaceHolder]="''">
+        <nz-option [nzLabel]="'类型1'" [nzValue]="'类型1'"></nz-option>
+        <nz-option [nzLabel]="'类型2'" [nzValue]="'类型2'"></nz-option>
+      </nz-select>
+    </div>
+    <div class="input_item" nz-col [nzSpan]="12">
+      <label class="pull-left input_label">下单时间</label>
+      <nz-datepicker (ngModelChange)="_startDate=$event;_startValueChange()" [ngModel]="_startDate" [nzDisabledDate]="_disabledStartDate" nzShowTime [nzFormat]="'YYYY-MM-DD'" [nzPlaceHolder]="''"></nz-datepicker>
+      <span class="range_line"></span>
+      <nz-datepicker (ngModelChange)="_endDate=$event;_endValueChange()" [ngModel]="_endDate" [nzDisabledDate]="_disabledEndDate" [nzShowTime]="_endTime" [nzFormat]="'YYYY-MM-DD'" [nzPlaceHolder]="''"></nz-datepicker>
+      <span class="range_tip">今天</span>
+    </div>
+    <div class="input_item" nz-col [nzSpan]="6">
+      <label class="pull-left input_label">商品名称</label>
+      <nz-input [(ngModel)]="orderName" [nzSize]="'large'"></nz-input>
+    </div>
+    <div class="input_item" nz-col [nzSpan]="6">
+      <label class="pull-left input_label">发货方式</label>
+      <nz-select [ngModel]="'方式1'" [nzPlaceHolder]="''">
+        <nz-option [nzLabel]="'方式1'" [nzValue]="'方式1'"></nz-option>
+        <nz-option [nzLabel]="'方式2'" [nzValue]="'方式2'"></nz-option>
+      </nz-select>
+    </div>
+    <div class="input_item" nz-col [nzSpan]="12">
+      <label class="pull-left input_label">订单状态</label>
+      <nz-select [ngModel]="'状态1'" [nzPlaceHolder]="''">
+        <nz-option [nzLabel]="'状态1'" [nzValue]="'状态1'"></nz-option>
+        <nz-option [nzLabel]="'状态2'" [nzValue]="'状态2'"></nz-option>
+      </nz-select>
+    </div>
+    <div class="input_item" nz-col [nzSpan]="6">
+      <label class="pull-left input_label">房间号</label>
+      <nz-input [(ngModel)]="roomNumber" [nzSize]="'large'"></nz-input>
+    </div>
+    <div class="input_item btn_item" nz-col [nzSpan]="24">
+      <span class="red_btn">查询</span>
+      <span class="grey_btn">清除</span>
+    </div>
+  </div>
+  <div class="wrapper_tabs">
+    <nz-tabset>
+      <nz-tab *ngFor="let tab of tabs">
+        <ng-template #nzTabHeading>
+          {{tab.name}}
+        </ng-template>
+        <!--<span>{{tab.content}}</span>-->
+        <div class="tab_content">
+          <ng-container *ngIf="tab.index ==1">
+            <nz-table #nzTable [nzDataSource]="_dataSet" [nzPageSize]="10" nzShowSizeChanger>
+              <thead nz-thead>
+              <tr>
+                <th nz-th><span>房间号</span></th>
+                <th nz-th><span>订单号</span></th>
+                <th nz-th><span>姓名</span></th>
+                <th nz-th><span>手机</span></th>
+                <th nz-th><span>服务详情</span></th>
+                <th nz-th><span>开票信息</span></th>
+                <th nz-th><span>下单时间</span></th>
+                <th nz-th><span>订单类型</span></th>
+                <th nz-th><span>订单状态</span></th>
+                <th nz-th><span>操作</span></th>
+              </tr>
+              </thead>
+              <tbody nz-tbody>
+              <tr nz-tbody-tr *ngFor="let data of nzTable.data">
+                <td nz-td>
+                  {{data.roomNumber}}
+                </td>
+                <td nz-td>{{data.orderNumber}}</td>
+                <td nz-td>{{data.name}}</td>
+                <td nz-td>{{data.phone}}</td>
+                <td nz-td>{{data.serviceDetail}}</td>
+                <td nz-td>{{data.ticketInfo}}</td>
+                <td nz-td>{{data.orderTime}}</td>
+                <td nz-td>{{data.orderType}}</td>
+                <td nz-td>{{data.orderStatus}}</td>
+                <td nz-td>
+                  <span>
+                    <a>详情</a>
+                    <span class="divide_line">|</span>
+                    <a>发货</a>
+                    <span class="divide_line">|</span>
+                    <a>取消</a>
+                  </span>
+                </td>
+              </tr>
+              </tbody>
+            </nz-table>
+          </ng-container>
+        </div>
+      </nz-tab>
+    </nz-tabset>
+  </div>
+</div>
+
+
+

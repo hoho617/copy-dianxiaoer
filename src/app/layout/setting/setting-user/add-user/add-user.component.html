@@ -1,0 +1,39 @@
+<div class="wrapper_box">
+  <div class="wrapper_table">
+    <div class="input_item long_input_item">
+      <label class="pull-left input_label">员工姓名</label>
+      <nz-input [(ngModel)]="staffName" [nzSize]="'large'"></nz-input>
+    </div>
+    <div class="input_item long_input_item">
+      <label class="pull-left input_label">手机号</label>
+      <nz-input [(ngModel)]="phoneNumber" [nzSize]="'large'"></nz-input>
+    </div>
+    <div class="input_item long_input_item">
+      <label class="pull-left input_label">微信号</label>
+      <nz-input [(ngModel)]="wechatNumber" [nzSize]="'large'"></nz-input>
+    </div>
+    <div class="input_item long_input_item">
+      <label class="pull-left input_label">员工分组</label>
+      <nz-select [ngModel]="'管家组'" [nzPlaceHolder]="''">
+        <nz-option [nzLabel]="'管家组'" [nzValue]="'管家组'"></nz-option>
+        <nz-option [nzLabel]="'管家组2'" [nzValue]="'管家组2'"></nz-option>
+      </nz-select>
+    </div>
+    <div class="input_item long_input_item">
+      <label class="pull-left input_label">权限设置</label>
+      <div class="vertical_checkbox">
+          <!--<nz-checkbox-group [(ngModel)]="checkOptions"></nz-checkbox-group>-->
+        <label nz-checkbox *ngFor="let checkoption of checkOptions" [(ngModel)]="checkoption.checked" >
+          <span>{{checkoption.value}}</span><span class="checkbox_tip">{{checkoption.label}}</span>
+        </label>
+      </div>
+    </div>
+    <div class="input_item btn_item">
+      <span class="red_btn">保存</span>
+      <span class="grey_btn">保存并新增</span>
+    </div>
+  </div>
+</div>
+
+
+

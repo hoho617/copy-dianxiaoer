@@ -1,0 +1,154 @@
+/** 清除浮动*/
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+:host ::ng-deep .ant-modal {
+    top:120px;
+}
+:host ::ng-deep .ant-modal-title{
+    font-size:16px;
+    color:#172926;
+}
+:host ::ng-deep .ant-modal-body {
+    padding:10px 0 10px 10px;
+}
+:host ::ng-deep .ant-modal-footer {
+    border:none;
+    display: none;
+}
+.notice_list {
+    width:33%;
+    height:430px;
+    padding-right:10px;
+    border-right:1px solid #91a3ad;
+}
+.notice_item {
+    padding:9px 18px;
+    background: #efefef;
+    position: relative;
+    width:260px;
+    cursor: pointer;
+    margin-bottom:10px;
+}
+.notice_item-active {
+    background: rgba(240,90,30,.2);
+}
+.notice_item .notice_status {
+    display: inline-block;
+    width:70px;
+    height:70px;
+    background: #ffffff;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    text-align: center;
+    border:1px solid #91a3ad;
+    padding:5px 0;
+    margin-right:15px;
+}
+.notice_status h3{
+    font-size:20px;
+    color:#172926;
+    margin-bottom:5px;
+}
+.notice_status .status_icon {
+    padding:2px 9px;
+    line-height: 22px;
+    color:#fff;
+    font-size:14px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    background: #91a3ad;
+}
+.notice_status .status_delay {
+    background: #f05a1e;
+}
+.notice_item .notice_text {
+    display: inline-block;
+}
+.notice_item .notice_text h4 {
+    font-size: 14px;
+    color:#000;
+    line-height: 40px;
+    font-weight:bold;
+}
+.notice_item .notice_text p {
+    font-size:14px;
+    color:#000;
+}
+.close_btn {
+    position: absolute;
+    top:0;
+    right:0;
+    width:30px;
+    text-align: center;
+    padding:5px 0;
+}
+.close_btn .anticon-close {
+    font-size:20px;
+    color:#172926;
+}
+.notice_wrap {
+    width:67%;
+    padding:0 22px 0 15px;
+}
+.notice_info {
+
+}
+.notice_content {
+    height:30px;
+    line-height: 30px;
+    font-size:14px;
+    color:#172926;
+    padding-left:10px;
+}
+.content_title {
+    width:40%;
+    display: inline-block;
+}
+.notice_table {
+    margin-top:20px;
+}
+.notice_head {
+    height:24px;
+    line-height: 24px;
+    background: #91a3ad;
+    color:#fff;
+    font-size:14px;
+}
+.notice_row {
+    font-size:0;
+    height:30px;
+    line-height: 30px;
+    border-bottom:1px solid #91a3ad;
+    padding-right:28px;
+}
+.thing {
+    width:33.3%;
+    display:inline-block;
+    font-size:14px;
+    color:#595757;
+    text-align: center;
+}
+.thing:first-child {
+    text-align: left;
+}
+.thing:last-child {
+    text-align: right;
+}
+.total_price {
+    text-align:right;
+}
+.remarks_row {
+    height:50px;
+}
+.remarks {
+    font-size:14px;
+    color:#000000;
+}

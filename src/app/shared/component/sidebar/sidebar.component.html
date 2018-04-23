@@ -1,0 +1,18 @@
+<div class="sider">
+<nz-sider [nzWidth]="140">
+  <ul nz-menu [nzMode]="'inline'" style="height:100%;width:140px;background:#172926;" [nzTheme]="'dark'">
+    <ng-container *ngFor="let m of menuData">
+    <li nz-menu-item  *ngIf="m.type=='outside'" [class.ant-menu-item-selected]="m.isSelected" class="sider_item"><a routerLink="{{m.href}}" >{{m.name}}</a></li>
+    <!--<li nz-submenu (click)="submenu(m.name)" *ngIf="m.type=='parent'">-->
+      <!--<span title>{{m.name}}</span>-->
+      <!--<ng-container *ngFor="let c of m.children">-->
+        <!--<ul *ngIf="showSubmenu === m.name"  style="height:100%;width:140px;">-->
+          <!--<li *ngIf="c.type=='outside'" nz-menu-item><a routerLink="{{c.href}}" >{{c.name}}</a></li>-->
+          <!--<li *ngIf="c.type=='inside'" nz-menu-item><a routerLink="{{c.href}}" >{{c.name}}</a></li>-->
+        <!--</ul>-->
+      <!--</ng-container>-->
+    <!--</li>-->
+    </ng-container>
+  </ul>
+</nz-sider>
+</div>

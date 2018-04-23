@@ -1,0 +1,82 @@
+<div class="wrapper_box">
+  <div class="wrapper_input" nz-row>
+    <div class="input_item" nz-col [nzSpan]="6">
+      <label class="pull-left input_label">手机号码</label>
+      <nz-input [(ngModel)]="phoneNumber" [nzSize]="'large'"></nz-input>
+    </div>
+    <div class="input_item" nz-col [nzSpan]="6">
+      <label class="pull-left input_label">微信号</label>
+      <nz-input [(ngModel)]="wechatNumber" [nzSize]="'large'"></nz-input>
+    </div>
+    <div class="input_item" nz-col [nzSpan]="12">
+      <label class="pull-left input_label">客户来源</label>
+      <nz-select [ngModel]="'来源1'" [nzPlaceHolder]="''">
+        <nz-option [nzLabel]="'来源1'" [nzValue]="'来源1'"></nz-option>
+        <nz-option [nzLabel]="'来源2'" [nzValue]="'来源2'"></nz-option>
+      </nz-select>
+    </div>
+    <div class="input_item" nz-col [nzSpan]="6">
+      <label class="pull-left input_label">客户身份</label>
+      <nz-select [ngModel]="'身份1'" [nzPlaceHolder]="''">
+        <nz-option [nzLabel]="'身份1'" [nzValue]="'身份1'"></nz-option>
+        <nz-option [nzLabel]="'身份2'" [nzValue]="'身份2'"></nz-option>
+      </nz-select>
+    </div>
+    <div class="input_item" nz-col [nzSpan]="6">
+      <label class="pull-left input_label">标签</label>
+      <nz-select [ngModel]="'标签1'" [nzPlaceHolder]="''">
+        <nz-option [nzLabel]="'标签1'" [nzValue]="'标签1'"></nz-option>
+        <nz-option [nzLabel]="'标签2'" [nzValue]="'标签2'"></nz-option>
+      </nz-select>
+    </div>
+    <div class="input_item btn_item" nz-col [nzSpan]="24">
+      <span class="red_btn">查询</span>
+      <span class="grey_btn">清除</span>
+    </div>
+  </div>
+  <div class="wrapper_tabs table_content">
+    <nz-table #nzTable [nzDataSource]="data" [nzPageSize]="10" nzShowSizeChanger>
+      <thead nz-thead>
+      <tr>
+        <th nz-th><span>姓名</span></th>
+        <th nz-th><span>手机号</span></th>
+        <th nz-th><span>微信号</span></th>
+        <th nz-th><span>会员卡号</span></th>
+        <th nz-th><span>标签</span></th>
+        <th nz-th><span>积分</span></th>
+        <th nz-th><span>余额</span></th>
+        <th nz-th><span>用户创建时间</span></th>
+        <th nz-th><span>操作</span></th>
+      </tr>
+      </thead>
+      <tbody nz-tbody>
+      <tr nz-tbody-tr *ngFor="let data of nzTable.data">
+        <td nz-td>
+          {{data.name}}
+        </td>
+        <td nz-td>{{data.phoneNumber}}</td>
+        <td nz-td>{{data.wechatNumber}}</td>
+        <td nz-td>{{data.cardCode}}</td>
+        <td nz-td>{{data.tag}}</td>
+        <td nz-td>{{data.integral}}</td>
+        <td nz-td>{{data.balance}}</td>
+        <td nz-td>{{data.createTime}}</td>
+        <td nz-td>
+          <span>
+            <a>详情</a>
+            <span class="divide_line">|</span>
+            <a>加标签</a>
+            <span class="divide_line">|</span>
+            <a>发信息</a>
+            <span class="divide_line">|</span>
+            <a>送积分</a>
+          </span>
+        </td>
+      </tr>
+      </tbody>
+    </nz-table>
+  </div>
+</div>
+
+
+

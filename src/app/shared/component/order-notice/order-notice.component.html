@@ -1,0 +1,112 @@
+<div class="wrapper_notice">
+  <nz-modal [nzVisible]="isVisible" [nzTitle]="'订单通知（'+noticeNumber+'）'" [nzContent]="modalContent" (nzOnCancel)="handleCancel($event)" (nzOnOk)="handleOk($event)" [nzWidth]="830">
+    <ng-template #modalContent>
+      <div class="clearfix">
+          <div class="notice_list pull-left">
+            <div class="notice_item">
+              <span class="close_btn"><i class="anticon anticon-close"></i></span>
+              <div class="notice_status">
+                <h3>1203</h3>
+                <span class="status_icon status_finished">已接单</span>
+              </div>
+              <div class="notice_text">
+                <h4>打扫服务</h4>
+                <p>2018-03-08 09:55</p>
+              </div>
+            </div>
+            <div class="notice_item notice_item-active">
+              <span class="close_btn"><i class="anticon anticon-close"></i></span>
+              <div class="notice_status">
+                <h3>1203</h3>
+                <span class="status_icon status_delay">待接单</span>
+              </div>
+              <div class="notice_text">
+                <h4>打扫服务</h4>
+                <p>2018-03-08 09:55</p>
+              </div>
+            </div>
+          </div>
+        <div class="pull-left notice_wrap">
+          <div class="notice_info">
+            <div class="notice_content">
+                <span class="content_title">
+                  房号
+                </span>
+              <span>
+                  1203
+                </span>
+            </div>
+            <div class="notice_content">
+                <span class="content_title">
+                  服务请求人
+                </span>
+              <span>
+                  肖先生
+                </span>
+            </div>
+            <div class="notice_content">
+                <span class="content_title">
+                  手机号
+                </span>
+              <span>
+                  13845365485
+                </span>
+            </div>
+            <div class="notice_content">
+                <span class="content_title">
+                  下单时间
+                </span>
+              <span>
+                  2018-03-08 09:30
+                </span>
+            </div>
+            <div class="notice_content">
+                <span class="content_title">
+                  订单号
+                </span>
+              <span>
+                  201803080001
+                </span>
+            </div>
+            <div class="notice_table">
+              <div class="notice_head notice_content">
+                <span>订单内容</span>
+              </div>
+              <div class="notice_content notice_row">
+                <span class="thing">充电器</span>
+                <span class="thing">×1</span>
+                <span class="thing">￥12</span>
+              </div>
+              <div class="notice_content notice_row">
+                <span class="thing">擦皮鞋</span>
+                <span class="thing">×1</span>
+                <span class="thing">￥12</span>
+              </div>
+              <div class="notice_content notice_row">
+                <span class="thing">充电器</span>
+                <span class="thing">×1</span>
+                <span class="thing">￥12</span>
+              </div>
+              <div class="notice_content notice_row">
+                <span class="thing">擦皮鞋</span>
+                <span class="thing">×1</span>
+                <span class="thing">￥12</span>
+              </div>
+              <div class="notice_content notice_row total_price">
+                <span class="thing">商品总额<span>￥48</span></span>
+              </div>
+          </div>
+            <div class="notice_table">
+              <div class="notice_head notice_content">
+                <span>订单备注</span>
+              </div>
+              <div class="notice_content notice_row remarks_row">
+                <div class="remarks">请在10:00前送达</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </nz-modal>
+</div>

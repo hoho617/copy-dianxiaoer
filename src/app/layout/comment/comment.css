@@ -1,0 +1,60 @@
+.wrapper_input {
+  padding:16px;
+  background: #fff;
+  font-size:14px;
+  color:#172926;
+}
+.input_item {
+  margin-bottom:16px;
+}
+.input_item:last-child{
+  margin-bottom:0;
+}
+.input_item .input_label {
+  height:30px;
+  line-height: 30px;
+  width:70px;
+  text-align: left;
+  color:#172926;
+}
+.input_item nz-input,.input_item nz-select,.input_item nz-datepicker {
+  width:140px;
+  font-size:14px;
+}
+:host ::ng-deep .ant-input,:host ::ng-deep .ant-select-selection--single,:host ::ng-deep .ant-select-selection__rendered {
+  height:30px;
+}
+:host ::ng-deep .ant-select-selection__rendered {
+  line-height: 28px;
+}
+.range_line {
+  display: inline-block;
+  width:10px;
+  height:1px;
+  vertical-align: middle;
+  background: #9fa0a0;
+}
+.range_tip {
+  font-size:14px;
+  color:#2196f3;
+}
+
+
+.wrapper_comment .input_item {
+  margin-bottom:25px;
+}
+.bottom_tip {
+  position: absolute;
+  bottom:-20px;
+  left:70px;
+  font-size:12px;
+  color:#91a3ad;
+}
+.rate_item {
+  height:30px;
+  line-height:30px;
+}
+.rate_title {
+  width:30%;
+  display: inline-block;
+}

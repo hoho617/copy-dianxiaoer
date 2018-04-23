@@ -1,0 +1,16 @@
+<app-header (onVoted)="onVoted($event)"></app-header>
+<app-sidebar [menuData]="menuData"></app-sidebar>
+<div class="wrap">
+    <div class="pull-left" [style.width.px]="offsetwidth">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="pull-left">
+      <app-inform></app-inform>
+    </div>
+    <div class="clear"></div>
+  <div class="foot" nz-col [nzSpan]="24">
+    <!--<img src="../../../../assets/img/pms-11.png" style="vertical-align: middle;"/>-->
+    客赞
+  </div>
+</div>
+

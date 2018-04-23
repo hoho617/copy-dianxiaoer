@@ -1,0 +1,35 @@
+<div class="wrapper_box">
+  <div class="title">
+    房间设置 >
+    <span>新增房间</span>
+  </div>
+  <div class="wrapper_input">
+    <div class="input_item long_input_item">
+      <label class="pull-left input_label">房间类型</label>
+      <nz-select [ngModel]="'豪华房'" [nzPlaceHolder]="''">
+        <nz-option [nzLabel]="'豪华房'" [nzValue]="'豪华房'"></nz-option>
+        <nz-option [nzLabel]="'标间'" [nzValue]="'标间'"></nz-option>
+      </nz-select>
+    </div>
+    <div class="input_item short_input_item">
+      <label class="pull-left input_label">房间号码</label>
+      <div class="generate_code">
+        <nz-input [(ngModel)]="roomNumber" [nzSize]="'large'"></nz-input>
+        <span class="btn_item" style="margin-left:10px;">
+          <span class="grey_btn">生成房二维码</span>
+        </span>
+        <div class="code_box">
+          <img src="../../../../../assets/images/generate_code.jpg" alt="">
+          <p class="download_code"><span>下载二维码</span></p>
+        </div>
+        <div class="input_item btn_item">
+          <span class="red_btn">保存</span>
+          <span class="grey_btn">保存并新增</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

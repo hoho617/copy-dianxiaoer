@@ -1,0 +1,53 @@
+.only_tabs {
+  margin:0;
+}
+.input_item {
+  margin-bottom:16px;
+}
+.input_item:last-child{
+  margin-bottom:0;
+}
+.input_item .input_label {
+  height:30px;
+  line-height: 30px;
+  width:70px;
+  text-align: left;
+  color:#172926;
+}
+.input_item nz-input,.input_item nz-select,.input_item nz-datepicker {
+  width:140px;
+  font-size:14px;
+}
+:host ::ng-deep .ant-input,:host ::ng-deep .ant-select-selection--single,:host ::ng-deep .ant-select-selection__rendered {
+  height:30px;
+}
+:host ::ng-deep .ant-select-selection__rendered {
+  line-height: 28px;
+}
+
+
+.query_input {
+  padding-left:16px;
+}
+.query_input .input_label {
+  width:40px;
+  height:30px;
+  line-height:30px;
+  display: inline-block;
+}
+.long_input_item .input_label {
+  width:60px;
+}
+.long_input_item nz-input{
+  width:160px;
+  font-size:14px;
+}
+:host ::ng-deep .ant-input,:host ::ng-deep .ant-select-selection--single,:host ::ng-deep .ant-select-selection__rendered {
+  height:30px;
+}
+.query_input .btn_item{
+  display: inline-block;
+  margin-left:20px;
+}
+
+

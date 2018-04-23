@@ -1,0 +1,92 @@
+<div class="wrapper_box">
+  <div class="wrapper_input" nz-row>
+    <div class="add_goods">
+        <button nz-button [nzType]="'primary'" [routerLink]="['add']">
+          <i class="anticon anticon-plus"></i><span>新增商品</span>
+        </button>
+    </div>
+    <div class="seperate_line"></div>
+    <div class="input_item" nz-col [nzSpan]="6">
+      <label class="pull-left input_label">全部商品</label>
+      <nz-select [ngModel]="'商品1'" [nzPlaceHolder]="''">
+        <nz-option [nzLabel]="'商品1'" [nzValue]="'商品1'"></nz-option>
+        <nz-option [nzLabel]="'商品2'" [nzValue]="'商品2'"></nz-option>
+      </nz-select>
+    </div>
+    <div class="input_item" nz-col [nzSpan]="6">
+      <label class="pull-left input_label">商品类别</label>
+      <nz-select [ngModel]="'类型1'" [nzPlaceHolder]="''">
+        <nz-option [nzLabel]="'类型1'" [nzValue]="'类型1'"></nz-option>
+        <nz-option [nzLabel]="'类型2'" [nzValue]="'类型2'"></nz-option>
+      </nz-select>
+    </div>
+    <div class="input_item long_label" nz-col [nzSpan]="12">
+      <label class="pull-left input_label long_label_title">商品、服务名称</label>
+      <nz-input [(ngModel)]="goodsName" [nzSize]="'large'"></nz-input>
+    </div>
+    <div class="input_item btn_item" nz-col [nzSpan]="24">
+      <span class="red_btn">查询</span>
+      <span class="grey_btn">清除</span>
+    </div>
+  </div>
+  <div class="wrapper_tabs">
+    <nz-tabset>
+      <nz-tab *ngFor="let tab of tabs">
+        <ng-template #nzTabHeading>
+          {{tab.name}}
+        </ng-template>
+        <div class="tab_content">
+          <ng-container *ngIf="tab.index ==1">
+            <nz-table #nzTable [nzDataSource]="_dataSet" [nzPageSize]="10" nzShowSizeChanger (nzDataChange)="_displayDataChange($event)" (nzPageIndexChange)="_refreshStatus()" (nzPageSizeChange)="_refreshStatus()">
+              <thead nz-thead>
+              <tr>
+                <th nz-th nzCheckbox>
+                  <label nz-checkbox [(ngModel)]="_allChecked" [nzIndeterminate]="_indeterminate" (ngModelChange)="_checkAll($event)">
+                  </label>
+                </th>
+                <th nz-th><span>商品名称</span></th>
+                <th nz-th><span>类别</span></th>
+                <th nz-th><span>价格</span></th>
+                <th nz-th><span>库存</span></th>
+                <th nz-th><span>销量</span></th>
+                <th nz-th><span>积分</span></th>
+                <th nz-th><span>开售时间</span></th>
+                <th nz-th><span>商品期限</span></th>
+                <th nz-th><span>状态</span></th>
+                <th nz-th><span>操作</span></th>
+              </tr>
+              </thead>
+              <tbody nz-tbody>
+              <tr nz-tbody-tr *ngFor="let data of nzTable.data">
+                <td nz-td nzCheckbox>
+                  <label nz-checkbox [(ngModel)]="data.checked" (ngModelChange)="_refreshStatus($event)">
+                  </label>
+                </td>
+                <td nz-td>{{data.goodsName}}</td>
+                <td nz-td>{{data.goodsType}}</td>
+                <td nz-td>{{data.goodsPrice}}</td>
+                <td nz-td>{{data.goodsStock}}</td>
+                <td nz-td>{{data.goodsSales}}</td>
+                <td nz-td>{{data.goodsIntegral}}</td>
+                <td nz-td>{{data.startSaleTime}}</td>
+                <td nz-td>{{data.endSaleTime}}</td>
+                <td nz-td>{{data.goodsStatus}}</td>
+                <td nz-td>
+                  <span>
+                    <a>查看</a>
+                    <span class="divide_line">|</span>
+                    <a>修改</a>
+                  </span>
+                </td>
+              </tr>
+              </tbody>
+            </nz-table>
+          </ng-container>
+        </div>
+      </nz-tab>
+    </nz-tabset>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,37 @@
+.wrapper_input {
+  padding:16px;
+  background: #fff;
+  font-size:14px;
+  color:#172926;
+}
+.input_item {
+  height:30px;
+  line-height: 30px;
+  margin-bottom:15px;
+}
+.input_item:last-child{
+  margin-bottom:0;
+}
+.wrapper_input .input_label {
+  height:30px;
+  line-height: 30px;
+  width:70px;
+  text-align: left;
+  color:#172926;
+}
+.wrapper_input nz-input,.wrapper_input nz-select,.wrapper_input nz-datepicker {
+  width:140px;
+  font-size:14px;
+}
+:host ::ng-deep .ant-input,:host ::ng-deep .ant-select-selection--single,:host ::ng-deep .ant-select-selection__rendered {
+  height:30px;
+}
+:host ::ng-deep .ant-select-selection__rendered {
+  line-height: 28px;
+}
+
+.table_content {
+  padding:16px;
+}
+
+

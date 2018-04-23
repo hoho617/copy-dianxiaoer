@@ -1,0 +1,253 @@
+*{
+  font-size: 14px ;
+  /*color: #000;*/
+  font-family:'微软雅黑';
+}
+.pull-left{
+  float: left;
+}
+.pull-right{
+  float: right;
+}
+.anticon{
+  font-size: 20px !important;
+}
+.wrapper_box {
+  padding-left:10px;
+  padding-top:10px;
+}
+/*输入框公用样式*/
+.ant-input {
+  font-size:14px !important;
+  color:#172926 !important;
+}
+/*页面高*/
+.wrapper_table {
+  height:603px;
+}
+
+
+/** layout标题栏*/
+.title {
+  height:40px;
+  line-height: 40px;
+  padding-left:16px;
+  font-size:14px;
+  color:#231815;
+}
+.title span {
+  font-weight:bold;
+}
+/*每一小栏的标题栏*/
+.wrapper_title {
+  font-size:14px;
+  color:#000;
+  font-weight:bold;
+}
+/*分割线 默认为上下margin16px*/
+.seperate_line {
+  width:100%;
+  height:1px;
+  background-color: #90a4ad;
+  margin:16px 0;
+}
+.mtop_line {
+  margin-top:10px;
+}
+/*新增按钮*/
+.add_goods .ant-btn {
+  height:30px;
+  line-height: 30px;
+  font-size:14px;
+  background-color: #f05a1e;
+  border:none;
+  padding:0 10px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+}
+.add_goods .ant-btn:hover,.add_goods .ant-btn:active,.add_goods .ant-btn:focus {
+  color:#fff;
+  background-color: #f05a1e;
+  border:none;
+}
+.add_goods .anticon-plus {
+  font-size:14px !important;
+  font-weight: bold;
+}
+
+/*按钮组  取消和保存、清除*/
+.btn_item span {
+  /*width:60px;*/
+  padding:0 16px;
+  height:30px;
+  line-height: 30px;
+  font-size:14px;
+  color:#fff;
+  border:none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  border-radius:4px;
+  white-space: nowrap;
+  position: relative;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-transition: all .3s cubic-bezier(.645,.045,.355,1);
+  transition: all .3s cubic-bezier(.645,.045,.355,1);
+}
+.btn_item span:hover {
+  opacity:.8;
+}
+.btn_item .red_btn {
+  background-color: #f05a1e;
+  margin-right:5px;
+}
+.btn_item .grey_btn {
+  background-color: #90a4ad;
+}
+.btn_item .disable_btn {
+  background-color: #9fa0a0;
+}
+.upload_btn_clear {
+  position: absolute;
+  right:-66px;
+  top:50%;
+  margin-top:-15px;
+}
+
+/*简介 描述 textarea*/
+.input_desc nz-input{
+  width:500px !important;
+}
+.desc_area .ant-input[type="textarea"]{
+  height:100px;
+  resize: none;
+  background-color: #efefef;
+  font-size:14px;
+  color:#172926;
+}
+
+/** 单选按钮（两个一行）*/
+.radio_area {
+  height:30px;
+  line-height: 30px;
+  display: inline-block;
+  font-size:14px;
+}
+.radio_item {
+  margin-right:40px !important;
+}
+.radio_area span {
+  padding-left:3px !important;
+  color:#172926;
+}
+/* 图片上传*/
+.upload_item .input_label {
+  height:96px !important;
+  line-height: 96px !important;
+}
+.upload_item {
+  margin-bottom:25px !important;
+  position: relative;
+}
+.upload_box {
+  display: inline-block;
+  position: relative;
+}
+.upload_box .anticon-plus {
+  font-size:30px !important;
+  font-weight:bold;
+  color:#91a3ad;
+  padding-top:10px;
+}
+.bottom_tip {
+  position: absolute;
+  bottom:-20px;
+  left:70px;
+  font-size:12px;
+  color:#91a3ad;
+}
+.upload_tip {
+  bottom:-12px;
+}
+
+
+/*没有下margin*/
+.no_bottom {
+  margin-bottom:0 !important;
+}
+/*没有padding*/
+.no_padding {
+  padding:0 !important;
+}
+/*表格内容中的详情、删除之间的|*/
+.divide_line {
+  color:#2196f3;
+}
+
+/*tab栏*/
+.wrapper_tabs {
+  padding:0 16px;
+  background: #fff;
+  margin-top:10px;
+}
+.wrapper_tabs .ant-tabs {
+  color:#90a4ad;
+  font-size:14px;
+}
+.wrapper_tabs .ant-tabs-bar {
+  border-bottom:1px solid #90a4ad;
+}
+.wrapper_tabs .ant-tabs .ant-tabs-tab {
+  padding:15px 20px;
+}
+.wrapper_tabs .ant-tabs-nav .ant-tabs-tab-active,.wrapper_tabs .ant-tabs-nav .ant-tabs-tab:hover{
+  color:#f05a1e;
+}
+.wrapper_tabs .ant-tabs-ink-bar{
+  background: #f05a1e;
+}
+
+.wrapper_tabs .ant-table {
+  font-size:14px;
+}
+.wrapper_tabs .ant-table-thead > tr > th {
+  background-color: #91a3ad;
+  color:#fff;
+}
+
+
+
+
+
+
+
+/*滚动条*/
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar
+{
+  width: 6px;
+  height: 6px;
+  background-color: #F5F5F5;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+  border-radius:0px;
+  background-color: #F5F5F5;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb
+{
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.2);
+  box-shadow: inset 0 0 6px rgba(0,0,0,.2);
+  background-color: #999999;
+}

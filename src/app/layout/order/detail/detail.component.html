@@ -1,0 +1,343 @@
+<div class="title">
+  订单 >
+  <span>订单详情</span>
+</div>
+<div class="wrap-content">
+  <div class="title-progress">
+    订单进度
+  </div>
+  <div class="progress">
+    <div  class="wrap-progress">
+      <div class="accept" [class.done]="isDone">
+        <span class="">买家下单</span>
+      </div>
+      <div class="accept">
+        <span class="acceptProcess">接单服务</span>
+      </div>
+      <div class="accept">
+        <span class="acceptProcess">发货送达（未完成）</span>
+      </div>
+      <div class="accept">
+        <span class="acceptProcess">服务完成（未完成）</span>
+      </div>
+    </div>
+    <div class="order-time">
+      <p>2018-08-03 08:37</p>
+      <p>2018-08-03 08:37</p>
+      <p>2018-08-03 08:37</p>
+      <p>2018-08-03 08:37</p>
+    </div>
+  </div>
+</div>
+<div class="wrap-info">
+  <div class="pull-left info-left">
+    <div class="order-info">
+      <div class="order-title">
+        <div class="pull-left">
+          订单信息
+        </div>
+        <div class="pull-right deal">
+          交易完成
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="order-content">
+        <span class="content-title">
+          房间号
+        </span>
+        <span>
+          1203
+        </span>
+      </div>
+      <div class="order-content">
+        <span class="content-title">
+          订单号
+        </span>
+        <span>
+          1203
+        </span>
+      </div>
+      <div class="order-content">
+        <span class="content-title">
+          房间号
+        </span>
+        <span>
+          1203
+        </span>
+      </div>
+      <div class="order-content">
+        <span class="content-title">
+          订单类型
+        </span>
+        <span>
+          1203
+        </span>
+      </div>
+      <div class="order-content">
+        <span class="content-title">
+          订单备注
+        </span>
+        <span>
+          1203
+        </span>
+      </div>
+      <div class="order-content">
+        <span class="content-title">
+          姓名
+        </span>
+        <span>
+          1203
+        </span>
+      </div>
+      <div class="order-content">
+        <span class="content-title">
+          手机号
+        </span>
+        <span>
+          1203
+        </span>
+      </div>
+      <div class="order-content">
+        <span class="content-title">
+          开票
+        </span>
+        <span>
+          1203
+        </span>
+      </div>
+      <div class="order-content">
+        <span class="content-title">
+          发票领取时间
+        </span>
+        <span>
+          1203
+        </span>
+      </div>
+    </div>
+    <div class="order-info top">
+      <div class="order-title">
+        <div class="pull-left">
+          配送信息
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="order-content">
+        <span class="content-title">
+          配送方式
+        </span>
+        <span>
+          快递配送  | 酒店房间
+        </span>
+      </div>
+      <div class="order-content">
+        <span class="content-title">
+          收货信息
+        </span>
+        <span>
+          湖南省 长沙市  芙蓉区 解放西路  17384393333
+        </span>
+      </div>
+      <div class="order-content">
+        <span class="content-title">
+          状态
+        </span>
+        <span>
+          待发货
+        </span>
+      </div>
+      <div class="distri-detail">
+        <div class="content-title pull-left">
+          配送详情
+        </div>
+        <div class="pull-left">
+          <p>顺丰快递   单号：122343343343   </p>
+          <p>配送员：张某   13574493405  13854269874</p>
+          <p>物流查询  菜鸟驿站 </p>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="pull-left evaluate">
+    <div class="order-info">
+      <div class="order-title">
+        <div class="pull-left">
+          评价信息
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="order-content smile">
+        <span class="content-title">
+          总体感受
+        </span>
+        <span class="feel">
+          <label>
+            <img src="../../../../assets/images/feel-06.png" [class.none]="feel=='good'" (click)="feeling('good')">
+            <img src="../../../../assets/images/feel-09.png" [class.none]="feel!='good'">
+            好评
+          </label>
+          <label>
+            <img src="../../../../assets/images/feel-07.png" [class.none]="feel=='soso'" (click)="feeling('soso')">
+            <img src="../../../../assets/images/feel-10.png" [class.none]="feel!='soso'">
+            中评
+          </label>
+          <label>
+            <img src="../../../../assets/images/feel-08.png" [class.none]="feel=='bad'" (click)="feeling('bad')">
+            <img src="../../../../assets/images/feel-11.png" [class.none]="feel!='bad'">
+            差评
+          </label>
+        </span>
+      </div>
+      <div class="grade-content">
+        <span class="pull-left content-title">
+          评分
+        </span>
+        <div class="pull-left grade-right">
+          <div class="grade-detail">
+            <span class="grade-title">
+              包装
+            </span>
+            <nz-rate [ngModel]="star"></nz-rate>
+          </div>
+        <div class="grade-detail">
+          <span class="grade-title">
+            周边环境
+          </span>
+          <nz-rate [ngModel]="star"></nz-rate>
+        </div>
+        <div class="grade-detail">
+            <span class="grade-title">
+              卫生
+            </span>
+            <nz-rate [ngModel]="star"></nz-rate>
+          </div>
+          <div class="grade-detail">
+            <span class="grade-title">
+              设施
+            </span>
+            <nz-rate [ngModel]="star"></nz-rate>
+          </div>
+          <div class="grade-detail">
+              <span class="grade-title">
+                服务
+              </span>
+              <nz-rate [ngModel]="star"></nz-rate>
+            </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="order-content other">
+          <span class="content-title">
+            其他问题
+          </span>
+          <span class="feel">
+              <nz-input [(ngModel)]="inputValue" [nzType]="'textarea'" [nzRows]="'5'" [nzPlaceHolder]="''"></nz-input>
+          </span>
+        </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="order-info wrap-info invoice">
+    <div class="order-title">
+      <div class="pull-left">
+        发票信息
+      </div>
+      <div class="pull-right deal">
+        已开票
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="order-content">
+      <span class="content-title">
+        房间号
+      </span>
+      <span>
+        1203
+      </span>
+    </div>
+    <div class="order-content">
+      <span class="content-title">
+        订单号
+      </span>
+      <span>
+        1203
+      </span>
+    </div>
+    <div class="order-content">
+      <span class="content-title">
+        房间号
+      </span>
+      <span>
+        1203
+      </span>
+    </div>
+    <div class="order-content">
+      <span class="content-title">
+        订单类型
+      </span>
+      <span>
+        1203
+      </span>
+    </div>
+    <div class="order-content">
+      <span class="content-title">
+        订单备注
+      </span>
+      <span>
+        1203
+      </span>
+    </div>
+    <div class="order-content">
+      <span class="content-title">
+        姓名
+      </span>
+      <span>
+        1203
+      </span>
+    </div>
+    <div class="order-content">
+      <span class="content-title">
+        手机号
+      </span>
+      <span>
+        1203
+      </span>
+    </div>
+    <div class="order-content">
+      <span class="content-title">
+        开票
+      </span>
+      <span>
+        1203
+      </span>
+    </div>
+    <div class="order-content">
+      <span class="content-title">
+        发票领取时间
+      </span>
+      <span>
+        1203
+      </span>
+    </div>
+</div>
+<div class="order-info wrap-info invoice noheight">
+    <div class="order-title">
+      <div class="pull-left">
+        配送信息
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="">
+        <div class="order-title no-bottom">
+          <span class="thing">配送信息</span>
+          <span class="thing">×1</span>
+          <span class="thing">×12</span>
+        </div>
+        <div class="order-title no-bottom">
+            <span class="thing">配送信息</span>
+            <span class="thing">×1</span>
+            <span class="thing">×12</span>
+          </div>
+    </div>
+</div>
